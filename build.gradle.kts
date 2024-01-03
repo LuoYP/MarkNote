@@ -11,6 +11,10 @@ repositories {
     mavenCentral()
 }
 
+dependencies {
+    implementation("cn.hutool:hutool-all:5.8.24")
+}
+
 // Configure Gradle IntelliJ Plugin
 // Read more: https://plugins.jetbrains.com/docs/intellij/tools-gradle-intellij-plugin.html
 intellij {
