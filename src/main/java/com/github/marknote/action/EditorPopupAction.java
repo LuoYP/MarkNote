@@ -1,5 +1,6 @@
 package com.github.marknote.action;
 
+import com.github.marknote.window.Dialog;
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.actionSystem.CommonDataKeys;
@@ -11,6 +12,7 @@ public class EditorPopupAction extends AnAction {
     public void actionPerformed(AnActionEvent e) {
         Editor editor = e.getRequiredData(CommonDataKeys.EDITOR);
         String selectedText = editor.getSelectionModel().getSelectedText();
-
+        Dialog dialog = new Dialog();
+        dialog.show();
     }
 }
