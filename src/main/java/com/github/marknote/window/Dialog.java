@@ -1,7 +1,6 @@
 package com.github.marknote.window;
 
 import com.intellij.openapi.ui.DialogWrapper;
-import com.intellij.uiDesigner.core.GridLayoutManager;
 import org.jetbrains.annotations.Nullable;
 
 import javax.swing.*;

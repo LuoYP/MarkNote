@@ -27,7 +27,7 @@
 
     </extensions>
     <actions>
-        <action id="EditorPopupAction" class="com.github.marknote.action.EditorPopupAction" text="EditorPopupAction">
+        <action id="EditorPopupAction" class="com.github.marknote.action.EditorPopupAction" text="AddMarkBook">
             <add-to-group group-id="EditorPopupMenu" anchor="first"/>
             <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt 0"/>
         </action>
