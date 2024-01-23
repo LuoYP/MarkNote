@@ -24,7 +24,7 @@
     <!-- Extension points defined by the plugin.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
     <extensions defaultExtensionNs="com.intellij">
-
+        <toolWindow factoryClass="com.github.marknote.window.NoteFactory" id="MarkNote" anchor="right" icon="/icons/note.svg"></toolWindow>
     </extensions>
     <actions>
         <action id="EditorPopupAction" class="com.github.marknote.action.EditorPopupAction" text="AddMarkBook">

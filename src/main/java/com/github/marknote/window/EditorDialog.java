@@ -1,12 +1,15 @@
 package com.github.marknote.window;
 
+import com.github.marknote.model.Note;
 import com.github.marknote.model.NoteInfo;
+import com.github.marknote.storege.NoteStorage;
 import com.intellij.openapi.ui.DialogWrapper;
 import com.intellij.ui.EditorTextField;
 import org.jetbrains.annotations.Nullable;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.Objects;
 
 /**
  * 添加笔记使用的对话框
@@ -43,9 +46,11 @@ public class EditorDialog extends DialogWrapper {
         JPanel jPanel = new JPanel();
         JButton button = new JButton("添加到列表");
         button.addActionListener(e -> {
-            noteInfo.setTitle(titleTextField.getText())
-                    .setExegesis(contentTextField.getText());
-            System.out.println(noteInfo.fileName());
+            noteInfo.setTitle(titleTextField.getText()).setExegesis(contentTextField.getText());
+            if (Objects.isNull(NoteStorage.NOTE)) {
+                NoteStorage.NOTE = new Note();
+            }
+            NoteStorage.NOTE.noteInfos().add(noteInfo);
         });
         jPanel.add(button);
         return jPanel;
